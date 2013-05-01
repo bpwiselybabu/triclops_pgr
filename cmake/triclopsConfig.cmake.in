@@ -1,0 +1,17 @@
+# - Config file for the triclops package
+# It defines the following variables
+#  TRICLOPS_INCLUDE_DIRS - include directories for FooBar
+#  TRICLOPS_LIBRARIES    - libraries to link against
+#  TRICLOPS_EXECUTABLE   - the bar executable
+ 
+# Compute paths
+get_filename_component(TRICLOPS_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(TRICLOPS_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+ 
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${TRICLOPS_CMAKE_DIR}/VisionTools2Targets.cmake")
+ 
+# These are IMPORTED targets created by FooBarTargets.cmake
+set(TRICLOPS_LIBRARIES pgrlibdcstereo "@TRICLOPS_LIBRARIES@" pnmio )
+
+

@@ -1,0 +1,4 @@
+ADD_SUBDIRECTORY(example1)
+ADD_SUBDIRECTORY(simplegrab)
+ADD_SUBDIRECTORY(simplestereo)
+ADD_SUBDIRECTORY(xb3stereo)
